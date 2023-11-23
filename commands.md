@@ -32,8 +32,10 @@ npx webpack --config webpack.config.js
 npm install --save-dev style-loader css-loader
 ```
 
-```
+# Output Management
 
+```
+npm install --save-dev html-webpack-plugin
 ```
 
 ```
