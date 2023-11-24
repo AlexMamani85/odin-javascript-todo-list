@@ -16,14 +16,17 @@ function leftDOM(projects) {
         color:white;
         font-size: 20px;
         align-items: center;
-        height: 2rem;
+        height: 3.5rem;
+        align-self: center;
         border:none;
         border-radius: 10px;
+        letter-spacing: 2px;
+        padding: 20px;
 `
     home.style = buttonStyle;
     home.style.backgroundColor='green'
 
-    home.innerHTML='home'
+    home.innerHTML='Home'
     element.appendChild(home);
 
     projects.forEach(project => {
