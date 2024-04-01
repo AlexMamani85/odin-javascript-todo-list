@@ -40,11 +40,15 @@ function TodoCard(todo) {
         background-color: lightgreen;
         border-radius: 10px;
     `
+    completedInput.style = `
+        margin: 20px;
+    `
 
     dueDate.style = `
         margin:  0 10px;
         padding: 10px 0;
         margin: 10px 0;
+        font-size: 1.2rem;
     `
     let lowPriorityStyle = `
         background-color: blue;
@@ -75,8 +79,8 @@ function TodoCard(todo) {
     element.appendChild(description);
     element.appendChild(dueDate);
     element.appendChild(priority);    
-    completedDiv.append(completedInput);
-    completedDiv.append(completedLabel);
+    completedDiv.appendChild(completedInput);
+    completedDiv.appendChild(completedLabel);
     element.appendChild(completedDiv);
 
     return element;
