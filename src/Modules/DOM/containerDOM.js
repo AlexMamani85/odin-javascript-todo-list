@@ -10,8 +10,14 @@ function containerDOM(todosAlone, projects) {
         grid-template-columns: 1fr 4fr;
     `
 
-    element.appendChild(LeftDOM(projects));
-    element.appendChild(RightDOM(todosAlone, projects));
+    let projectActual=todosAlone;
+    function setProjectOrTodo(project) {
+        projectActual=project;
+        document.querySelector('.rightDOM').remove();
+        element.appendChild(RightDOM(projectActual));
+    }
+    element.appendChild(LeftDOM(todosAlone, projects, setProjectOrTodo));
+    element.appendChild(RightDOM(projectActual));
     
     return element;
 }
