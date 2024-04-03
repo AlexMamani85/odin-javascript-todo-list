@@ -1,4 +1,4 @@
-function leftDOM(projects) {
+function leftDOM(todosAlone, projects,setProjectOrTodo) {
 
     let element = document.createElement('div');
     let home = document.createElement('button');
@@ -27,13 +27,20 @@ function leftDOM(projects) {
     home.style.backgroundColor='green'
 
     home.innerHTML='Home'
+    home.addEventListener('click', () => {
+        setProjectOrTodo(todosAlone);
+        console.log(todosAlone)
+    });
     element.appendChild(home);
 
     projects.forEach(project => {
         let projectButton = document.createElement('button');
         projectButton.style = buttonStyle
         projectButton.innerHTML = project.title;
-        console.log(project.title)
+        projectButton.addEventListener('click', () => {
+            setProjectOrTodo(project);
+            console.log(project)
+        });
         element.appendChild(projectButton);
     });
 
