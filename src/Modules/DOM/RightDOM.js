@@ -1,11 +1,13 @@
 import TodoCard from './TodoCard.js';
 
-function rightDOM(todosAlone, projects) {
+function rightDOM(projectActual) {
     let container = document.createElement('div');
+    
+    container.className='rightDOM'
     let title = document.createElement('div');
     let element = document.createElement('div');
 
-    title.innerHTML = todosAlone.title;
+    title.innerHTML = projectActual.title;
 
     title.style = `
         text-align: center;
@@ -25,9 +27,9 @@ function rightDOM(todosAlone, projects) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     `
-    todosAlone.todos.forEach(todo => {
-        element.appendChild(TodoCard(todo));
-    });
+        projectActual.todos.forEach(todo => {
+            element.appendChild(TodoCard(todo));
+        });
 
     container.appendChild(title);
     container.appendChild(element);
