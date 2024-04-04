@@ -38,8 +38,10 @@ npm install --save-dev style-loader css-loader
 npm install --save-dev html-webpack-plugin
 ```
 
-```
+# Github Pages
 
+```
+npm install --save-dev gh-pages
 ```
 
 ```
